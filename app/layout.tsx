@@ -1,5 +1,6 @@
 // app/layout.tsx
-import './globals.css';
+import './globals.css'; // attenzione: ./ perché è nella stessa cartella
+
 
 export const metadata = {
   title: 'Thanaris Tiles',
