@@ -1,99 +1,62 @@
+// app/page.tsx
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main style={{ fontFamily: 'Arial, sans-serif', backgroundColor: '#f5f5f5', padding: '40px' }}>
+    <main className="min-h-screen flex flex-col items-center justify-start bg-gray-50 p-8">
       {/* Header */}
-      <header style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '2.5rem', color: '#222' }}>Benvenuto in Thanaris</h1>
-        <p style={{ fontSize: '1.2rem', color: '#555' }}>
-          Soluzioni innovative per il tuo business
+      <header className="w-full max-w-6xl text-center mb-12">
+        <Image
+          src="/logo.png" // sostituisci con il logo reale
+          alt="Thanaris Tiles Logo"
+          width={200}
+          height={60}
+          className="mx-auto mb-6"
+        />
+        <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          Thanaris Tiles
+        </h1>
+        <p className="text-lg text-gray-600">
+          Large-format porcelain surfaces, 600×1200 mm collection.
         </p>
       </header>
 
-      {/* Hero Section */}
-      <section
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#fff',
-          padding: '20px',
-          borderRadius: '10px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          marginBottom: '40px'
-        }}
-      >
-        <div style={{ flex: 1, paddingRight: '20px' }}>
-          <h2 style={{ color: '#0070f3' }}>Chi siamo</h2>
-          <p style={{ color: '#444', lineHeight: '1.6' }}>
-            Thanaris è una realtà orientata all’innovazione e all’eccellenza.
-            Offriamo soluzioni personalizzate per aziende e privati, con un
-            approccio basato su qualità, affidabilità e risultati concreti.
-          </p>
-        </div>
-        <div style={{ flex: 1 }}>
-          <Image
-            src="https://via.placeholder.com/500x300"
-            alt="Thanaris"
-            width={500}
-            height={300}
-            style={{ borderRadius: '10px' }}
-          />
-        </div>
+      {/* Hero Image */}
+      <section className="w-full max-w-6xl flex flex-col items-center mb-12">
+        <Image
+          src="/hero.jpg" // sostituisci con un’immagine della collezione
+          alt="Thanaris Tiles Collection"
+          width={1200}
+          height={500}
+          className="rounded-xl shadow-lg"
+        />
       </section>
 
-      {/* Services Section */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#0070f3' }}>
-          I nostri servizi
-        </h2>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px'
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: '#fff',
-              padding: '20px',
-              borderRadius: '10px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-            }}
-          >
-            <h3>Consulenza</h3>
-            <p>Supporto strategico e operativo per far crescere la tua azienda.</p>
-          </div>
-          <div
-            style={{
-              backgroundColor: '#fff',
-              padding: '20px',
-              borderRadius: '10px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-            }}
-          >
-            <h3>Marketing</h3>
-            <p>Campagne mirate per raggiungere e fidelizzare i tuoi clienti.</p>
-          </div>
-          <div
-            style={{
-              backgroundColor: '#fff',
-              padding: '20px',
-              borderRadius: '10px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-            }}
-          >
-            <h3>E-commerce</h3>
-            <p>Soluzioni complete per vendere online in modo semplice ed efficace.</p>
-          </div>
+      {/* Info Section */}
+      <section className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <h2 className="text-2xl font-semibold mb-2">Premium Quality</h2>
+          <p className="text-gray-600">
+            Our tiles are made with top-grade porcelain for durability and elegance.
+          </p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <h2 className="text-2xl font-semibold mb-2">Large Formats</h2>
+          <p className="text-gray-600">
+            Sizes up to 600×1200 mm for seamless, modern interior surfaces.
+          </p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <h2 className="text-2xl font-semibold mb-2">Fast Delivery</h2>
+          <p className="text-gray-600">
+            Reliable shipping across Italy with tracking and insurance.
+          </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer style={{ textAlign: 'center', color: '#777', marginTop: '40px' }}>
-        © {new Date().getFullYear()} Thanaris - Tutti i diritti riservati
+      <footer className="w-full max-w-6xl text-center text-gray-500 text-sm mb-4">
+        © 2025 Thanaris Tiles. All rights reserved.
       </footer>
     </main>
   );
