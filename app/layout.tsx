@@ -1,7 +1,6 @@
 // app/layout.tsx
 import './globals.css'; // attenzione: ./ perché è nella stessa cartella
 
-
 export const metadata = {
   title: 'Thanaris Tiles',
   description: 'Large-format porcelain surfaces, 600×1200 mm collection.',
